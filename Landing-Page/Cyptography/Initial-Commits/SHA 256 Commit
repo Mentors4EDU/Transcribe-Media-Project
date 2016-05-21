@@ -1,0 +1,18 @@
+var schema = {
+    version: 1,
+    stores: [{
+      name: 'encrypt-store',
+      encrypted: true
+    }]
+ }; var options = {
+    Encryption: {
+      expiration: 100*15, // optional data expiration in ms.
+      encryptKey: false,   // optional encrypt primary key
+      method: 'rc4', // default is 'acs-cbc'
+      secrets: [{
+        name: 'aaaa',
+        key: 'ezvczwjqrx.rutdsozsshxju'
+      }]
+    }
+ };
+ var db = new ydn.db.Storage('encrypted-db-name', schema, options);
