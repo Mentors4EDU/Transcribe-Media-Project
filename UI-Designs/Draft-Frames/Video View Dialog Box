@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled - set my name - UXPin Preview</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/img/favicon-90cb8314.ico">
+    <link rel="icon" type="image/png" href="/img/favicon-90cb8314.ico">
+    <link rel="icon" href="/img/ios-logo-180x180-4f260175.png">
+    <link rel="apple-touch-icon" href="/img/ios-logo-180x180-4f260175.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <base href="//collaborate.uxpin.com/07d88a4b6de8b06e53b6a5f924077f64e0f1b6b5">
+    <link rel="stylesheet" href="//collaborate.uxpincdn.com/styles/Preview-d842793d.css">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bgibmbhbcdfckbcbdkihlclfildbaehc">
+</head>
+<body ng-controller="HomeController" class="loading" ng-class="{'loading' : isLoading, 'left-panel-active' : (isVisible && sidebarVisible), 'sitemap-visible' : (sitemapVisible && sidebarVisible), 'panel-visible' : (panelVisible && sidebarVisible), 'adding-comment' : isAddingComment, 'dragging' : dragging, 'no-toolbar' : noToolbar || isParticipant, 'crosshair-cursor' : showCrosshairCursor, 'sidebar-collapsed' : sidebarVisible === false}" ng-keydown="keyDown($event)">
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-19584088-9', 'auto');
+</script>
+        <script type="text/javascript">
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || '68f9313d866df031326598d49a29feb2a560246d';
+    function _kms(u){
+        setTimeout(function(){
+            var d = document, f = d.getElementsByTagName('script')[0],
+                s = d.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = u;
+            f.parentNode.insertBefore(s, f);
+        }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+<script type="text/javascript">
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;
+s.src='https://widget.intercom.io/widget/{app_id}';
+var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+<script type="text/javascript">
+  (function(a, ns, cb, l) {
+      l = document.createElement('link');
+      l.rel = "stylesheet"
+      l.type = "text/css"
+      l.href = "//fast.appcues.com/appcues.css"
+      l.id = 'appcues-css'
+      document.getElementsByTagName('head')[0].appendChild(l);
+      window[ns] = function(callback) {
+        (window[ns].q = window[ns].q || []).push(callback);
+        if (window[a] != null) {
+          while (window[ns].q.length) {
+            cb = window[ns].q.shift();
+            if (typeof cb === 'function') cb();
+          }
+        }
+      };
+    })('Appcues', 'AppcuesReady');
+</script>
+<script src="//fast.appcues.com/14532.js" async defer onload="AppcuesReady()"></script>
+    <section
+        ng-if="canShowLoginToolbar"
+        ng-controller="LoginToolbarController"
+        class="login-toolbar top-position with-input set-name"
+        ng-class="{'visible' : showLoginToolbar, 'show-form' : showNameForm, 'success' : nameSet}"
+        ng-click="clickStopPropagation($event)">
+        <p>Hey there, stranger! <a ng-href="" ng-click="onClickShowNameForm($event);">Set your name</a> to introduce yourself to the team. Already have an account? <a ng-mouseover="updateReferer()" ng-href="{{referer}}">Log in</a>.</p>
+        <form>
+            <fieldset>
+                <p>My name is <input type="text" ng-model="anonymousName" sync-focus-with="focused" ng-blur="setFocus(false);" ng-keydown="onKeyDown($event)" ng-change="onChange()"><button class="btn-flat white-style" ng-disabled="disabled" ng-click="onClickSetName($event)">That's me</button></p>
+            </fieldset>
+        </form>
+    </section>
+    <div ui-view></div>
+    <div ng-class="{'fade-in' : panelFadeIn}" ui-view="comments"></div>
+    <div ng-class="{'fade-in' : sitemapFadeIn}" ui-view="sitemap"></div>
+    <div ui-view="nav"></div>
+    <div ui-view="canvas"></div>
+    <section id="responsive-toolbar" adjust-to-viewport-size>
+        <a class="only-icon-font icon-font-arrow show-main-toolbar" ng-click="showToolbar()" toggle-visibility toggle-flag="!isToolbarVisible()" toggle-width-open="34" toggle-width-closed="0" ng-if="!params.isDocument">
+            Show main toolbar
+            <span class="tooltip blue-style bottom-arrow">Show main toolbar</span>
+        </a>
+        <ul ui-view="breakpoints" ng-if="breakpointsVisible"></ul>
+        <ul ui-view="breadcrumbs" ng-if="breadcrumbsVisible" class="breadcrumbs"></ul>
+        <div ui-view="settings"></div>
+    </section>
+    <div ui-view="overlay"></div>
+    <div class="loader"></div>
+    <script type="text/javascript">
+    window.ApplicationConfiguration = {
+            rollbar:{"postServerAccessToken":"41207a8115a54d37abe5ffacd0c7e4a4","postClientAccessToken":"49dfce4d74984afea0b7e5261c5d6237","options":{"exceptions":{"environment":"production"},"reporter":{"verbose":true,"environment":"production","root":"/var/www/uxpin-preview/releases/20160520133303/config/env"}}},
+            socketServerURL: 'https://pubsub.uxpin.com',
+            voicechatServerURL: '//voicechat.uxpin.com',
+            loginPageURL: 'https://app.uxpin.com',
+            upgradePlanURL: 'https://app.uxpin.com/dms/Dashboard/Default?show_action=ba',
+            cookieDomain: '.uxpin.com',
+            userData:{"id_user":"574295","name":"amkamal@oakland.edu","email":"amkamal@oakland.edu","avatar":"https://s.gravatar.com/avatar/3c9e67a6276a8161aaa7ee98b404d6dd?s=30","timezone":"America/Denver","is_trial":true,"is_anonymous":false,"id_session":"js8oeoopkg3u7nqssefoj06rpnk9bg6736jtu0bpg01outsr3el0","is_owner":true,"hash":"15d85bd7fed0f641365a34761b418f55b49b4850e8a6f7411392b70d67ac7e41"},
+            project:{"id_project":5569676,"id_collection":1256592,"name":"Untitled - set my name","hash":"07d88a4b6de8b06e53b6a5f924077f64e0f1b6b5","type":"W","features":{"live_share":true,"user_testing":true,"password":true,"new_editor":false,"new_engine":true,"ignore_engine_version":false},"created_at":"2016-05-22T00:01:37+01:00","updated_at":"2016-05-22T00:05:01+01:00"},
+            uxpinURL: 'https://redesigned.uxpin.com/',
+            userContentPrefix: 's3.amazonaws.com/upload.uxpin',
+            userContentPrefixCached: 'uc.uxpin.com',
+            staticContentPrefixCached: 'https://static.uxpincdn.com',
+        })
+        if (window.ApplicationConfiguration.userData.is_anonymous === false) {
+            if (typeof Intercom === 'function')  {
+                Intercom('boot', {
+                    user_hash: '15d85bd7fed0f641365a34761b418f55b49b4850e8a6f7411392b70d67ac7e41',
+                    user_id: '574295',
+                    email: 'amkamal@oakland.edu',
+                    app_id: 'c5ea3ec6243c3a8164fb702a95a3e61ca193a2cc'
+                });
+                Intercom('trackEvent', 'Opened preview');
+            }
+            if (typeof AppcuesReady === 'function') {
+                AppcuesReady(function() {
+                    Appcues.identify('574295', {
+                        email: 'amkamal@oakland.edu',
+                    });
+                });
+            }
+        }
+    </script>
+        <script type="text/javascript" src="//cdn.socket.io/socket.io-1.3.7.js"></script>
+        <script type="text/javascript" src="//live.uxpincdn.com/plivo/plivo.min.js"></script>
+        <script type="text/javascript" src="//static.opentok.com/v2/js/opentok.min.js"></script>
+        <script type="text/javascript" src="//collaborate.uxpincdn.com/scripts/engine-454bf804.js"></script>
+        <script type="text/javascript" src="//collaborate.uxpincdn.com/scripts/vendors-83b108c8.js"></script>
+        <script type="text/javascript" src="//collaborate.uxpincdn.com/scripts/app-ae4bd499.js"></script>
+    <app-view-promo ng-if="isAppViewAvailable"></app-view-promo>
+</body>
+</html>
