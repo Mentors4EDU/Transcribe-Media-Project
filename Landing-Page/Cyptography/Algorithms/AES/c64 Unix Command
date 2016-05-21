@@ -1,0 +1,8 @@
+lda #$f2      
+ldx #$09      
+ldy #$83
+sta $d413
+stx $d413
+sty $d413
+;Command for server
+;Avoids miningless noise or misinterpretations in the algorithms or in the encryptions
