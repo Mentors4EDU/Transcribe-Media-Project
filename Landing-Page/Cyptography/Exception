@@ -1,0 +1,23 @@
+from __future__ import absolute_import, division, print_function 
+6	7	from enum import Enum 8	9	10	class _Reasons(Enum): 
+11 BACKEND_MISSING_INTERFACE = 0 12	UNSUPPORTED_HASH = 1 
+13	UNSUPPORTED_CIPHER = 2 14	UNSUPPORTED_PADDING = 3 
+15 UNSUPPORTED_MGF = 4 16	UNSUPPORTED_PUBLIC_KEY_ALGORITHM = 5 
+17	UNSUPPORTED_ELLIPTIC_CURVE = 6 
+18	UNSUPPORTED_SERIALIZATION = 7 
+19	UNSUPPORTED_X509 = 8 20	UNSUPPORTED_EXCHANGE_ALGORITHM = 9 
+21	UNSUPPORTED_DIFFIE_HELLMAN = 10 
+22	23	24	class UnsupportedAlgorithm(Exception): 
+25	def __init__(self, message, reason=None): 
+26	super(UnsupportedAlgorithm, self).__init__(message) 
+27 self._reason = reason 28	29	30	
+class AlreadyFinalized(Exception): 31	pass 
+32	33	34	class AlreadyUpdated(Exception): 35	
+pass 36	37	38	class NotYetFinalized(Exception): 39	
+pass 40	41	42	class InvalidTag(Exception): 43	
+pass 44	45	46	class InvalidSignature(Exception): 47	pass 48	
+49	50 class InternalError(Exception): 51	
+def __init__(self, msg, err_code): 
+52	super(InternalError, self).__init__(msg) 
+53	self.err_code = err_code 54	55	
+56 class InvalidKey(Exception): 57	pass
