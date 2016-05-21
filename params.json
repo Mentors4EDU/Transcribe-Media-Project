@@ -1,0 +1,6 @@
+{
+  "name": "Transcribe-media-project",
+  "tagline": "Change the way media is transcribed",
+  "body": "### Welcome to our Repo\r\nStarFin is the next big downstreaming and upstreaming service that is based off of Node.JS and the MPEG Dash Protocol. It was made by Beshoy Hanna in Node.JS and will be done by Andrew Kamal, his team mate in PHP. This is their official project for the WSU Hackathon in 2016. \r\n\r\n### Current Steaming\r\nCurrent streaming services have trouble supporting MPEG4 protocols, and we wanna create a more integrated alternative for Adobe Flash that best suits Java developers or open source programmers.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
