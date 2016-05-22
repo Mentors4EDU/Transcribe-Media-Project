@@ -1,12 +1,11 @@
 
 var path = require('path'),
  express = require('express'),
- app = express();
- var streamServer = require('./streamserver.js');
+ app = express(),
+ routes = require('../routes/routes.js')(app),
+ ffmpeg = require('fluent-ffmpeg');
+ //cmd = new FfmpegCommand();
 
-	app.get('/api/stream/:filename', function(req, res){
-		streamServer.stream(req, res);
-	});
+//app.use(express.static(__dirname + '/flowplayer'));
 
 app.listen(4000);
-
