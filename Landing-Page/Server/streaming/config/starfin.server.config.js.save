@@ -1,0 +1,71 @@
+login as: root
+root@162.243.212.183's password:
+Access denied
+root@162.243.212.183's password:
+Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-85-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat May 21 14:14:54 EDT 2016
+
+  System load:  0.02              Processes:           78
+  Usage of /:   7.2% of 39.25GB   Users logged in:     0
+  Memory usage: 4%                IP address for eth0: 162.243.212.183
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+0 packages can be updated.
+0 updates are security updates.
+
+Welcome to the MEAN Stack!
+
+MEAN is a boilerplate that provides a nice starting point for MongoDB, Node.js,                                           Express, and AngularJS based applications.
+It is designed to give you quick and organized way to start developing of MEAN b                                          ased web apps with useful modules like
+mongoose and passport pre-bundled and configured. We mainly try to take care of                                           the connection points between existing
+popular frameworks and solve common integration problems.
+
+You can find your mean application in /opt/mean and can run it by typing "grunt"                                           from /opt/mean.
+You can then view the sample app at http://162.243.212.183:3000
+
+You can read more about MEAN at http://meanjs.org/
+You can read more about Node.js at https://www.digitalocean.com/community/commun                                          ity_tags/node-js
+Last login: Sat May 21 14:14:54 2016
+root@mean-2gb-nyc2-01:~# cd opt/mean
+-bash: cd: opt/mean: No such file or directory
+root@mean-2gb-nyc2-01:~# cd /opt/mean
+root@mean-2gb-nyc2-01:/opt/mean# ls
+bower.json          gruntfile.js   node_modules              README.md
+CHANGELOG.md        gulpfile.js    package.json              scripts
+config              karma.conf.js  Procfile                  server.js
+CONTRIBUTING.md     LICENSE.md     protractor.conf.js        test.js
+docker-compose.yml  manifest.yml   public
+Dockerfile          modules        PULL_REQUEST_TEMPLATE.md
+root@mean-2gb-nyc2-01:/opt/mean# c modules/
+c: command not found
+root@mean-2gb-nyc2-01:/opt/mean# cd modules/
+root@mean-2gb-nyc2-01:/opt/mean/modules# cd articles/
+root@mean-2gb-nyc2-01:/opt/mean/modules/articles# cd server/
+root@mean-2gb-nyc2-01:/opt/mean/modules/articles/server# ls
+config  controllers  models  policies  routes
+root@mean-2gb-nyc2-01:/opt/mean/modules/articles/server# ls
+config  controllers  models  policies  routes
+root@mean-2gb-nyc2-01:/opt/mean/modules/articles/server# cd config
+root@mean-2gb-nyc2-01:/opt/mean/modules/articles/server/config# nano articles.server.config.js
+  GNU nano 2.2.6                       File: articles.server.config.js
+
+'use strict';
+
+/**
+ * Module dependencies
+ */
+var path = require('path'),
+  config = require(path.resolve('./config/config'));
+
+/**
+ * Module init function.
+ */
+module.exports = function (app, db) {
+
+};
