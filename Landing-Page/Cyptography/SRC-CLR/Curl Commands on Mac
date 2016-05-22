@@ -1,0 +1,67 @@
+Last login: Sun May 22 03:47:22 on console
+Fruit:~ wsu$ brew tap srcclr/srcclr
+-bash: brew: command not found
+Fruit:~ wsu$ brew install srcclr
+-bash: brew: command not found
+Fruit:~ wsu$ srcclr activate
+-bash: srcclr: command not found
+Fruit:~ wsu$ 92fa48d3-daa6-4124-9349-50b1b068e848
+-bash: 92fa48d3-daa6-4124-9349-50b1b068e848: command not found
+Fruit:~ wsu$ curl -sSL https://srcclr.com/install | bash
+######################################################################## 100.0%
+
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+/tmp/srcclr.wmhWzV/srcclr-2.1.2/install.sh: line 48: [: -lt: unary operator expected
+Running install script.
+
+System-wide installation will place files in:
+/opt/srcclr/2.1.2
+
+
+and will require root access to install.
+
+Local installation will will place files in:
+/Users/wsu/srcclr
+
+and you will need to put /Users/wsu/srcclr/bin in your PATH.
+However, root access is not required for installation.
+
+Would you like to install system-wide (s) or locally (l)? s
+Installing with root privileges
+
+WARNING: Improper use of the sudo command could lead to data loss
+or the deletion of important system files. Please double-check your
+typing when using sudo. Type "man sudo" for more information.
+
+To proceed, enter your password, or type Ctrl-C to abort.
+Fruit:~ wsu$ srcclr activate
+-bash: srcclr: command not found
+Fruit:~ wsu$ curl -sSL https://srcclr.com/install | bash
+######################################################################## 100.0%
+
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+/tmp/srcclr.54GL42/srcclr-2.1.2/install.sh: line 48: [: -lt: unary operator expected
+Running install script.
+
+System-wide installation will place files in:
+/opt/srcclr/2.1.2
+
+
+and will require root access to install.
+
+Local installation will will place files in:
+/Users/wsu/srcclr
+
+and you will need to put /Users/wsu/srcclr/bin in your PATH.
+However, root access is not required for installation.
+
+Would you like to install system-wide (s) or locally (l)? l
+==> copying files into /Users/wsu/srcclr
+
+=============================== SUCCESS ========================================
+
+The SourceClear cli is now installed.  The next step is to activate it with
+a token from the agent configuration page on srcclr.com using:
+/Users/wsu/srcclr/bin/srcclr activate
