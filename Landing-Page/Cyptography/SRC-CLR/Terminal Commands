@@ -1,0 +1,9 @@
+brew tap srcclr/srcclr
+brew install srcclr
+
+srcclr activate
+c215a8fa-44ba-4f75-be02-fdb2b3757571
+
+srcclr scan --url https://github.com/Mentors4EDU/Transcribe-Media-Project
+
+srcclr scan FILE_PATH
